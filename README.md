@@ -3,30 +3,35 @@ This repository is for the Data Analytics Bootcamp Module 20 Challenge
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+For this assignment, I used various techniques to train and evaluate a supervised machine learning model based on loan risk. I used a dataset of historical lending activity from a peer-to-peer lending services company to build a model that can identify the creditworthiness of borrowers.
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+* The purpose of this analysis is to create a model that can correctly gauge whether or not a person will be a healthy or high-risk loan candidate.
+* I used a dataset from a peer-to-peer lending services company to create this model. 
+* This dataset contains several factors that may affect the health of a loan, such as income, debt, and debt to income ratio.
+* Using this dataset, I was able to split the data into training and testing categories, then run the training set through the logistic regression model.
+* Once the model made its predictions, I was able to confirm the results by determining the balanced accuracy score, viewing the confusion matrix, and creating a classification report.
+* I also oversampled the data and ran predictions again, confirming the results on a larger dataset.
+
 
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
+* Machine Learning Model 1-using the original dataset:
+  * Balanced accuracy score: 94%
+  * Precision: 100% healthy loans, 87% high-risk loans
+  * Recall: 100% healthy loans, 89% high-risk loans
+![original](Credit_Risk/Images/original_data.PNG)
 
-* Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
 
+* Machine Learning Model 2-using the oversampled dataset:
+  * Balanced accuracy score: 99%
+  * Precision: 100% healthy loans, 87% high-risk loans
+  * Recall: 100% healthy loans, 100% high-risk loans
+![oversampled](Credit_Risk/Images/oversampled_data.PNG)
 
-
-* Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+I believe that this model would be appropriate to determine loan risk, if left open to human interpretation/review.
+* The model yields high accuracy scores when run on both the original and oversampled datasets.
+* While the accuracy, precision, and recall are all higher when the model determines a healthy loan candidate, the model is still fairly accurate at determining a high-risk candidate. As long as borderline candidates can be left open to additional research and interpretation, I believe this would be a useful tool when deciding loan risk.
 
-If you do not recommend any of the models, please justify your reasoning.
